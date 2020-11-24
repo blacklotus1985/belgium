@@ -17,7 +17,7 @@ def substitute(df,series, dict):
     corpus = ' '.join(corpus_list)
     df.testo = pd.Series(corpus)
     return df
-df = pd.read_csv(os.getcwd()+r'/data/lettera_test.csv',header=0,sep=";")
+df = pd.read_csv(os.getcwd()+r'/data/lettera_db.csv',header=0,sep=";")
 df_dict = pd.read_csv(os.getcwd()+r'/data/dizionario.csv',header=0,sep=";",encoding='cp1252')
 dict = df_dict.set_index('key')['value'].to_dict()
 tagger = treetaggerwrapper.TreeTagger(TAGLANG='it')
