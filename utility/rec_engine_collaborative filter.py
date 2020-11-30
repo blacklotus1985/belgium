@@ -15,9 +15,9 @@ import re
 conf = configparser.ConfigParser()
 main_path = os.getcwd()
 path = os.path.dirname(os.getcwd())
-conf.read(os.path.dirname(os.getcwd())+'/configurations/configurations.ini')
-filename = conf.get("INPUT_FILES",conf.get("INPUT_FILES","input"))
-df = pd.read_csv(os.path.dirname(os.getcwd())+filename,delimiter=';' )
+conf.read(os.path.dirname(os.getcwd())+'\configurations\configurations.ini')
+filename = '\output\lettere_pulite.csv'
+df = pd.read_csv(os.path.dirname(os.getcwd())+filename,delimiter=';',header=None, names=['id_lettera','testo'] )
 old_df = df.copy()
 
 
@@ -125,7 +125,7 @@ def threshold_descriptions(df,matrix, conf, threshold=0.5,filename="default",sav
     threshhold_list=[]
     for i in range(len(matrix[0])):
         cosine_desc = matrix[i]
-        dict = {"job_ID":df["ID"][i],"similar_ID":df["ID"][np.where(matrix[i]>threshold)[0]].values, "similarity_value":np.asarray(cosine_desc[np.where(cosine_desc>threshold)[0]])}
+        dict = {"id_lettera":df["id_lettera"][i],"similar_ID":df["id_lettera"][np.where(matrix[i]>threshold)[0]].values, "similarity_value":np.asarray(cosine_desc[np.where(cosine_desc>threshold)[0]])}
         threshhold_list.append(dict)
     df_threshold = pd.DataFrame.from_records(threshhold_list,coerce_float=True)
 
@@ -155,16 +155,16 @@ def get_recommendations(title, cosine_sim):
     return df['title'].iloc[job_indices]
 
 # clean descriptions from italian stopwords
-df = clean_stop_words(df=df, column="description", lang = "italian",stem=True)
+df = clean_stop_words(df=df, column="testo", lang = "italian",stem=True)
 
 # clean descriptions
-df['description'] = df['description'].fillna('')
+df['testo'] = df['testo'].fillna('')
 
 # create tfidf model instance
-tfidf = TfidfVectorizer(stop_words='english')
+tfidf = TfidfVectorizer(stop_words='italian')
 
 # apply tfidf model to description column and create tf idf matrix
-tfidf_matrix = tfidf.fit_transform(df['description'])
+tfidf_matrix = tfidf.fit_transform(df['testo'])
 
 # swamp key value of vocabulary name-index
 word_indexes = tfidf.get_feature_names()
@@ -182,13 +182,13 @@ final_dict_list, data_frame_id_words = find_best_words(df=df,matrix=tfidf_matrix
 description_index_list = top_desciptions(cosine_sim)
 
 # loops all the description and gets indexes of all the descriptions that are within a threshold of similarity.
-threshhold_list,df_threshold = threshold_descriptions(df=df,matrix=cosine_sim,conf=conf,threshold=0.3,filename="threshold_descriptions.csv")
+threshhold_list,df_threshold = threshold_descriptions(df=df,matrix=cosine_sim,conf=conf,threshold=0.01,filename="threshold_text.csv")
 
 # drop duplicates from column
-indices = pd.Series(df.index, index=df['title']).drop_duplicates()
+indices = pd.Series(df.index, index=df['testo']).drop_duplicates()
 
 # get recommendations for given job
-indices_final = get_recommendations('Neolaureati in Ingegneria Informatica/Informatica',cosine_sim=cosine_sim)
+#indices_final = get_recommendations('Neolaureati in Ingegneria Informatica/Informatica',cosine_sim=cosine_sim)
 
 print(1)
 

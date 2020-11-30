@@ -24,7 +24,8 @@ tagger = treetaggerwrapper.TreeTagger(TAGLANG='it')
 clean_text = []
 for i in range(df.shape[0]):
     cleaned_series = substitute(series_df=df.iloc[i,:],series=df.loc[i,"testo"],dict=dict)
-    clean_text.append(cleaned_series.loc['testo'])
+    dict_clean = {"id_lettera":cleaned_series.loc["id_lettera"], "testo":cleaned_series.loc["testo"]}
+    clean_text.append(dict_clean)
     tags = tagger.tag_text(cleaned_series.testo)
     tags2 = treetaggerwrapper.make_tags(tags)
     df_tags= pd.DataFrame.from_records(tags2,columns=['word','pos','lemma'])
@@ -33,5 +34,5 @@ for i in range(df.shape[0]):
     del tags2
     del cleaned_series
 cl_df = pd.DataFrame(clean_text)
-cl_df.to_csv(os.getcwd()+r"/output/lettere_pulite.csv", sep=";",header=None)
+cl_df.to_csv(os.getcwd()+r"/output/lettere_pulite.csv", sep=";",columns=['id_lettera','testo'],index=False)
 print("end program")
