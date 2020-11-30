@@ -17,7 +17,7 @@ main_path = os.getcwd()
 path = os.path.dirname(os.getcwd())
 conf.read(os.path.dirname(os.getcwd())+'\configurations\configurations.ini')
 filename = '\output\lettere_pulite.csv'
-df = pd.read_csv(os.path.dirname(os.getcwd())+filename,delimiter=';',header=None, names=['id_lettera','testo'] )
+df = pd.read_csv(os.path.dirname(os.getcwd())+filename,delimiter=';', names=['id_lettera','testo'] )
 old_df = df.copy()
 
 
@@ -89,7 +89,7 @@ def find_best_words(df,matrix,word_dict,n,conf,filename="default",save=True):
         list.append(top_items)
         for elem in list[0]:
             final_terms.append(word_dict[elem])
-        dict={"job_ID":df["ID"][i], "top_words":final_terms}
+        dict={"id_lettera":df["id_lettera"][i], "top_words":final_terms}
         final_dict_list.append(dict)
         list=[]
         final_terms=[]
@@ -161,7 +161,7 @@ df = clean_stop_words(df=df, column="testo", lang = "italian",stem=True)
 df['testo'] = df['testo'].fillna('')
 
 # create tfidf model instance
-tfidf = TfidfVectorizer(stop_words='italian')
+tfidf = TfidfVectorizer()
 
 # apply tfidf model to description column and create tf idf matrix
 tfidf_matrix = tfidf.fit_transform(df['testo'])
