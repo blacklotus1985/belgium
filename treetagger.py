@@ -4,14 +4,15 @@ import os
 import re
 from nltk.corpus import wordnet as wn
 from nltk.tokenize.api import StringTokenizer
-import it_core_news_sm
-nlp = it_core_news_sm.load()
+#import it_core_news_sm
+from sentita import calculate_polarity
+import string
+#nlp = it_core_news_sm.load()
 
 #  "nlp" Objectis used to create documents with linguistic annotations.
-docs = nlp(u"All is well that ends well.")
+#docs = nlp(u"All is well that ends well.")
 
-for word in docs:
-    print(word.text,word.pos_)
+
 
 tester = "tagger"
 def substitute(series_df,series,dict):
@@ -23,6 +24,14 @@ def substitute(series_df,series,dict):
         else:
             corpus_list.append(word)
     corpus = ' '.join(corpus_list)
+    # remove punctuation
+    corpus = corpus.translate(str.maketrans('', '', string.punctuation))
+    # remove parenthesis
+    corpus = re.sub('[[]]', '', corpus)
+    # remove digits
+    corpus = re.sub(" \d+", " ", corpus)
+
+
     series_df.testo = corpus
     return series_df
 df = pd.read_csv(os.getcwd()+r'/data/lettera_db.csv',header=0,sep=";")
@@ -36,12 +45,9 @@ for i in range(df.shape[0]):
     clean_text.append(dict_clean)
     tags = tagger.tag_text(cleaned_series.testo)
     tags2 = treetaggerwrapper.make_tags(tags)
-    nlp = it_core_news_sm.load()
-    docs = nlp(dict_clean["testo"])
-    for word in docs:
-        print(word.text, word.pos_,word.tag_)
+    dict_list_t=dict_clean['testo']
     df_tags= pd.DataFrame.from_records(tags2,columns=['word','pos','lemma'])
-    df_tags.to_excel(os.getcwd()+r"/output/lettera"+str(i)+".xlsx",index=False)
+    df_tags.to_excel(os.getcwd()+r"/output/lettera"+str(i+1)+".xlsx",index=False)
     del tags
     del tags2
     del cleaned_series

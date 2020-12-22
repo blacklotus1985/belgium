@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Employerland_deliver/.idea/Employerland_deliver.iml" filepath="$PROJECT_DIR$/../Employerland_deliver/.idea/Employerland_deliver.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/belgium.iml" filepath="$PROJECT_DIR$/.idea/belgium.iml" />
     </modules>
   </component>

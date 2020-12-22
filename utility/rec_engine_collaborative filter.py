@@ -120,12 +120,12 @@ def threshold_descriptions(df,matrix, conf, threshold=0.5,filename="default",sav
     gets all the similarities for each description that are bigger of a certain threshold
     :param matrix: matrix of similarties
     :param threshold: fixed threshold
-    :return: data frame of dictionary list of Job ID - similarityID - Similarity value
+    :return: data frame of dictionary list of letter ID - similarityID - Similarity value
     """
     threshhold_list=[]
     for i in range(len(matrix[0])):
         cosine_desc = matrix[i]
-        dict = {"id_lettera":df["id_lettera"][i],"similar_ID":df["id_lettera"][np.where(matrix[i]>threshold)[0]].values, "similarity_value":np.asarray(cosine_desc[np.where(cosine_desc>threshold)[0]])}
+        dict = {"id_lettera":df["id_lettera"][i],"similar_ID":df["id_lettera"][np.where(matrix[i]>threshold)[0]].values, "similarity_value":list(np.asarray(cosine_desc[np.where(cosine_desc>threshold)[0]]))}
         threshhold_list.append(dict)
     df_threshold = pd.DataFrame.from_records(threshhold_list,coerce_float=True)
 
@@ -173,7 +173,7 @@ swap_vocab = {v:k for k,v in dict_vocab.items()}
 
 
 # calculate cosine similarity for the embedded vectors of the job positions
-cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
+cosine_sim = np.round(cosine_similarity(tfidf_matrix, tfidf_matrix),3)
 
 # find the most 5 representative words for each job position and save it into csv file
 final_dict_list, data_frame_id_words = find_best_words(df=df,matrix=tfidf_matrix,conf=conf,word_dict=swap_vocab,n=5,filename="id_words.csv")
@@ -182,7 +182,7 @@ final_dict_list, data_frame_id_words = find_best_words(df=df,matrix=tfidf_matrix
 description_index_list = top_desciptions(cosine_sim)
 
 # loops all the description and gets indexes of all the descriptions that are within a threshold of similarity.
-threshhold_list,df_threshold = threshold_descriptions(df=df,matrix=cosine_sim,conf=conf,threshold=0.01,filename="threshold_text.csv")
+threshhold_list,df_threshold = threshold_descriptions(df=df,matrix=cosine_sim,conf=conf,threshold=0.15,filename="threshold_text.csv")
 
 # drop duplicates from column
 indices = pd.Series(df.index, index=df['testo']).drop_duplicates()
