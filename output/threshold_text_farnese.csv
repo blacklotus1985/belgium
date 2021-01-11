@@ -1,0 +1,26 @@
+id_lettera;similar_ID;similarity_value
+Ammannati1;['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'];[1.0, 0.269, 0.237, 0.431, 0.187]
+Ammannati2;['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'];[0.269, 1.0, 0.287, 0.196, 0.16]
+Ammannati3;"['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'
+ 'F.Pepoli1']";[0.237, 0.287, 1.0, 0.222, 0.287, 0.161]
+Ammannati4;['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'];[0.431, 0.196, 0.222, 1.0, 0.204]
+Ammannati5;['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'];[0.187, 0.16, 0.287, 0.204, 1.0]
+Michelangelo1;['Michelangelo1'];[1.0]
+Michelangelo2;['Michelangelo2' 'Michelangelo3' 'Michelangelo5'];[1.0, 0.205, 0.155]
+Michelangelo3;['Michelangelo2' 'Michelangelo3' 'Michelangelo4' 'Michelangelo5' 'Vasari5'];[0.205, 1.0, 0.286, 0.247, 0.155]
+Michelangelo4;['Michelangelo3' 'Michelangelo4' 'Michelangelo5' 'F.Pepoli1' 'Vasari5'];[0.286, 1.0, 0.215, 0.169, 0.175]
+Michelangelo5;['Michelangelo2' 'Michelangelo3' 'Michelangelo4' 'Michelangelo5'];[0.155, 0.247, 0.215, 1.0]
+F.Pepoli1;"['Ammannati3' 'Michelangelo4' 'F.Pepoli1' 'F.Pepoli2' 'F.Pepoli3'
+ 'G.Pepoli1' 'G.Pepoli2' 'G.Pepoli3' 'Vasari2' 'Vasari3' 'Vasari4'
+ 'Vasari5']";[0.161, 0.169, 1.0, 0.343, 0.181, 0.155, 0.192, 0.208, 0.163, 0.167, 0.186, 0.175]
+F.Pepoli2;['F.Pepoli1' 'F.Pepoli2' 'F.Pepoli3' 'G.Pepoli1'];[0.343, 1.0, 0.183, 0.153]
+F.Pepoli3;['F.Pepoli1' 'F.Pepoli2' 'F.Pepoli3'];[0.181, 0.183, 1.0]
+G.Pepoli1;['F.Pepoli1' 'F.Pepoli2' 'G.Pepoli1'];[0.155, 0.153, 1.0]
+G.Pepoli2;['F.Pepoli1' 'G.Pepoli2' 'G.Pepoli3'];[0.192, 1.0, 0.19]
+G.Pepoli3;['F.Pepoli1' 'G.Pepoli2' 'G.Pepoli3' 'Vasari3' 'Vasari4' 'Vasari5'];[0.208, 0.19, 1.0, 0.194, 0.162, 0.171]
+Vasari1;['Vasari1' 'Vasari2' 'Vasari3' 'Vasari4'];[1.0, 0.179, 0.152, 0.153]
+Vasari2;['F.Pepoli1' 'Vasari1' 'Vasari2' 'Vasari3' 'Vasari4' 'Vasari5'];[0.163, 0.179, 1.0, 0.248, 0.188, 0.2]
+Vasari3;['F.Pepoli1' 'G.Pepoli3' 'Vasari1' 'Vasari2' 'Vasari3' 'Vasari4' 'Vasari5'];[0.167, 0.194, 0.152, 0.248, 1.0, 0.279, 0.335]
+Vasari4;['F.Pepoli1' 'G.Pepoli3' 'Vasari1' 'Vasari2' 'Vasari3' 'Vasari4' 'Vasari5'];[0.186, 0.162, 0.153, 0.188, 0.279, 1.0, 0.232]
+Vasari5;"['Michelangelo3' 'Michelangelo4' 'F.Pepoli1' 'G.Pepoli3' 'Vasari2'
+ 'Vasari3' 'Vasari4' 'Vasari5']";[0.155, 0.175, 0.175, 0.171, 0.2, 0.335, 0.232, 1.0]

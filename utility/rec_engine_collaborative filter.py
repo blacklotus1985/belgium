@@ -16,7 +16,9 @@ conf = configparser.ConfigParser()
 main_path = os.getcwd()
 path = os.path.dirname(os.getcwd())
 conf.read(os.path.dirname(os.getcwd())+'\configurations\configurations.ini')
-filename = '\output\lettere_pulite.csv'
+farnese = True
+if farnese:
+    filename = '\output\lettere_pulite_farnese.csv'
 df = pd.read_csv(os.path.dirname(os.getcwd())+filename,delimiter=';', names=['id_lettera','testo'] )
 old_df = df.copy()
 
@@ -175,6 +177,7 @@ swap_vocab = {v:k for k,v in dict_vocab.items()}
 # calculate cosine similarity for the embedded vectors of the job positions
 cosine_sim = np.round(cosine_similarity(tfidf_matrix, tfidf_matrix),3)
 
+
 # find the most 5 representative words for each job position and save it into csv file
 final_dict_list, data_frame_id_words = find_best_words(df=df,matrix=tfidf_matrix,conf=conf,word_dict=swap_vocab,n=5,filename="id_words.csv")
 
@@ -182,7 +185,7 @@ final_dict_list, data_frame_id_words = find_best_words(df=df,matrix=tfidf_matrix
 description_index_list = top_desciptions(cosine_sim)
 
 # loops all the description and gets indexes of all the descriptions that are within a threshold of similarity.
-threshhold_list,df_threshold = threshold_descriptions(df=df,matrix=cosine_sim,conf=conf,threshold=0.15,filename="threshold_text.csv")
+threshhold_list,df_threshold = threshold_descriptions(df=df,matrix=cosine_sim,conf=conf,threshold=0.15,filename="threshold_text_farnese.csv")
 
 # drop duplicates from column
 indices = pd.Series(df.index, index=df['testo']).drop_duplicates()

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/belgium.iml" filepath="$PROJECT_DIR$/.idea/belgium.iml" />
+      <module fileurl="file://$USER_HOME$/.kaggle/twitter-sentiment-analysis/.idea/twitter-sentiment-analysis2.iml" filepath="$USER_HOME$/.kaggle/twitter-sentiment-analysis/.idea/twitter-sentiment-analysis2.iml" />
     </modules>
   </component>
 </project>
