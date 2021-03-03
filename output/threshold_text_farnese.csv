@@ -1,26 +1,159 @@
 id_lettera;similar_ID;similarity_value
-Ammannati1;['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'];[1.0, 0.269, 0.237, 0.431, 0.187]
-Ammannati2;['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'];[0.269, 1.0, 0.287, 0.196, 0.16]
-Ammannati3;"['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'
- 'F.Pepoli1']";[0.237, 0.287, 1.0, 0.222, 0.287, 0.161]
-Ammannati4;['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'];[0.431, 0.196, 0.222, 1.0, 0.204]
-Ammannati5;['Ammannati1' 'Ammannati2' 'Ammannati3' 'Ammannati4' 'Ammannati5'];[0.187, 0.16, 0.287, 0.204, 1.0]
-Michelangelo1;['Michelangelo1'];[1.0]
-Michelangelo2;['Michelangelo2' 'Michelangelo3' 'Michelangelo5'];[1.0, 0.205, 0.155]
-Michelangelo3;['Michelangelo2' 'Michelangelo3' 'Michelangelo4' 'Michelangelo5' 'Vasari5'];[0.205, 1.0, 0.286, 0.247, 0.155]
-Michelangelo4;['Michelangelo3' 'Michelangelo4' 'Michelangelo5' 'F.Pepoli1' 'Vasari5'];[0.286, 1.0, 0.215, 0.169, 0.175]
-Michelangelo5;['Michelangelo2' 'Michelangelo3' 'Michelangelo4' 'Michelangelo5'];[0.155, 0.247, 0.215, 1.0]
-F.Pepoli1;"['Ammannati3' 'Michelangelo4' 'F.Pepoli1' 'F.Pepoli2' 'F.Pepoli3'
- 'G.Pepoli1' 'G.Pepoli2' 'G.Pepoli3' 'Vasari2' 'Vasari3' 'Vasari4'
- 'Vasari5']";[0.161, 0.169, 1.0, 0.343, 0.181, 0.155, 0.192, 0.208, 0.163, 0.167, 0.186, 0.175]
-F.Pepoli2;['F.Pepoli1' 'F.Pepoli2' 'F.Pepoli3' 'G.Pepoli1'];[0.343, 1.0, 0.183, 0.153]
-F.Pepoli3;['F.Pepoli1' 'F.Pepoli2' 'F.Pepoli3'];[0.181, 0.183, 1.0]
-G.Pepoli1;['F.Pepoli1' 'F.Pepoli2' 'G.Pepoli1'];[0.155, 0.153, 1.0]
-G.Pepoli2;['F.Pepoli1' 'G.Pepoli2' 'G.Pepoli3'];[0.192, 1.0, 0.19]
-G.Pepoli3;['F.Pepoli1' 'G.Pepoli2' 'G.Pepoli3' 'Vasari3' 'Vasari4' 'Vasari5'];[0.208, 0.19, 1.0, 0.194, 0.162, 0.171]
-Vasari1;['Vasari1' 'Vasari2' 'Vasari3' 'Vasari4'];[1.0, 0.179, 0.152, 0.153]
-Vasari2;['F.Pepoli1' 'Vasari1' 'Vasari2' 'Vasari3' 'Vasari4' 'Vasari5'];[0.163, 0.179, 1.0, 0.248, 0.188, 0.2]
-Vasari3;['F.Pepoli1' 'G.Pepoli3' 'Vasari1' 'Vasari2' 'Vasari3' 'Vasari4' 'Vasari5'];[0.167, 0.194, 0.152, 0.248, 1.0, 0.279, 0.335]
-Vasari4;['F.Pepoli1' 'G.Pepoli3' 'Vasari1' 'Vasari2' 'Vasari3' 'Vasari4' 'Vasari5'];[0.186, 0.162, 0.153, 0.188, 0.279, 1.0, 0.232]
-Vasari5;"['Michelangelo3' 'Michelangelo4' 'F.Pepoli1' 'G.Pepoli3' 'Vasari2'
- 'Vasari3' 'Vasari4' 'Vasari5']";[0.155, 0.175, 0.175, 0.171, 0.2, 0.335, 0.232, 1.0]
+id_lettera;['id_lettera'];[1.0]
+KBR_ms.III.1635_001;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_004' 'KBR_ms.III.1635_007'
+ 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_010'
+ 'AGR_Audience257-BIS_012' 'AGR_Audience257-BIS_016'
+ 'AGR_Audience257-BIS_018']";[1.0, 0.185, 0.248, 0.242, 0.177, 0.186, 0.213, 0.155, 0.182, 0.164]
+KBR_ms.III.1635_002;['KBR_ms.III.1635_002' 'KBR_ms.III.1635_004' 'KBR_ms.III.1635_005'];[1.0, 0.16, 0.311]
+KBR_ms.III.1635_003;['KBR_ms.III.1635_003'];[1.0]
+KBR_ms.III.1635_004;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_002' 'KBR_ms.III.1635_004'
+ 'KBR_ms.III.1635_005' 'KBR_ms.III.1635_007' 'AGR_Audience257-BIS_002'
+ 'AGR_Audience257-BIS_005' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_016' 'AGR_Audience257-BIS_019'
+ 'AGR_Audience257-BIS_027' 'AGR_Audience257-BIS_028']";[0.185, 0.16, 1.0, 0.234, 0.187, 0.191, 0.231, 0.173, 0.214, 0.182, 0.172, 0.182, 0.207, 0.177]
+KBR_ms.III.1635_005;['KBR_ms.III.1635_002' 'KBR_ms.III.1635_004' 'KBR_ms.III.1635_005'];[0.311, 0.234, 1.0]
+KBR_ms.III.1635_006;['KBR_ms.III.1635_006' 'KBR_ms.III.1635_007' 'AGR_Audience257-BIS_017'];[1.0, 0.17, 0.165]
+KBR_ms.III.1635_007;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_004' 'KBR_ms.III.1635_006'
+ 'KBR_ms.III.1635_007' 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_017'
+ 'AGR_Audience257-BIS_018']";[0.248, 0.187, 0.17, 1.0, 0.167, 0.187, 0.171, 0.183, 0.186, 0.155, 0.155]
+KBR_ms.III.987_001;"['KBR_ms.III.987_001' 'AGR_Audience257-BIS_003' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_016' 'AGR_Audience257-BIS_018'
+ 'AGR_Audience257-BIS_024']";[1.0, 0.233, 0.231, 0.186, 0.174, 0.168]
+AGR_Audience2152-4_001;['AGR_Audience2152-4_001'];[1.0]
+AGR_Audience2152-4_003;['AGR_Audience2152-4_003'];[1.0]
+AGR_Audience244-F_001;['AGR_Audience244-F_001'];[1.0]
+AGR_Audience257-BIS_001;"['AGR_Audience257-BIS_001' 'AGR_Audience257-BIS_006'
+ 'AGR_Audience257-BIS_011']";[1.0, 0.151, 0.212]
+AGR_Audience257-BIS_002;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_004' 'KBR_ms.III.1635_007'
+ 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_007' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_012' 'AGR_Audience257-BIS_014'
+ 'AGR_Audience257-BIS_016' 'AGR_Audience257-BIS_018'
+ 'AGR_Audience257-BIS_019' 'AGR_Audience257-BIS_020'
+ 'AGR_Audience257-BIS_023' 'AGR_Audience257-BIS_027'
+ 'AGR_Audience257-BIS_028']";[0.242, 0.191, 0.167, 1.0, 0.239, 0.16, 0.189, 0.191, 0.173, 0.207, 0.195, 0.18, 0.175, 0.178, 0.206, 0.249, 0.17, 0.163]
+AGR_Audience257-BIS_003;"['KBR_ms.III.987_001' 'AGR_Audience257-BIS_003' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_024']";[0.233, 1.0, 0.158, 0.151]
+AGR_Audience257-BIS_004;['AGR_Audience257-BIS_004' 'AGR_Audience257-BIS_008'];[1.0, 0.157]
+AGR_Audience257-BIS_005;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_004' 'KBR_ms.III.1635_007'
+ 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_003'
+ 'AGR_Audience257-BIS_005' 'AGR_Audience257-BIS_006'
+ 'AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_010'
+ 'AGR_Audience257-BIS_011' 'AGR_Audience257-BIS_012'
+ 'AGR_Audience257-BIS_016' 'AGR_Audience257-BIS_018'
+ 'AGR_Audience257-BIS_020' 'AGR_Audience257-BIS_023'
+ 'AGR_Audience257-BIS_027' 'AGR_Audience257-BIS_028']";[0.177, 0.231, 0.187, 0.239, 0.158, 1.0, 0.166, 0.157, 0.19, 0.178, 0.181, 0.235, 0.152, 0.21, 0.21, 0.191, 0.195]
+AGR_Audience257-BIS_006;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_007' 'AGR_Audience257-BIS_001'
+ 'AGR_Audience257-BIS_005' 'AGR_Audience257-BIS_006'
+ 'AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_010'
+ 'AGR_Audience257-BIS_012' 'AGR_Audience257-BIS_014'
+ 'AGR_Audience257-BIS_019' 'AGR_Audience257-BIS_021'
+ 'AGR_Audience257-BIS_023' 'AGR_Audience257-BIS_027'
+ 'AGR_Audience257-BIS_028']";[0.186, 0.171, 0.151, 0.166, 1.0, 0.201, 0.159, 0.22, 0.227, 0.203, 0.157, 0.17, 0.176, 0.228]
+AGR_Audience257-BIS_007;"['AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_007'
+ 'AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_010'
+ 'AGR_Audience257-BIS_019']";[0.16, 1.0, 0.194, 0.153, 0.167]
+AGR_Audience257-BIS_008;"['KBR_ms.III.1635_004' 'KBR_ms.III.1635_007' 'AGR_Audience257-BIS_002'
+ 'AGR_Audience257-BIS_004' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_007'
+ 'AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_010'
+ 'AGR_Audience257-BIS_011' 'AGR_Audience257-BIS_012'
+ 'AGR_Audience257-BIS_014' 'AGR_Audience257-BIS_016'
+ 'AGR_Audience257-BIS_017' 'AGR_Audience257-BIS_019'
+ 'AGR_Audience257-BIS_021' 'AGR_Audience257-BIS_024'
+ 'AGR_Audience257-BIS_026' 'AGR_Audience257-BIS_027'
+ 'AGR_Audience257-BIS_028']";[0.173, 0.183, 0.189, 0.157, 0.157, 0.201, 0.194, 1.0, 0.242, 0.189, 0.236, 0.215, 0.18, 0.187, 0.306, 0.219, 0.198, 0.189, 0.18, 0.203]
+AGR_Audience257-BIS_009;"['AGR_Audience257-BIS_009' 'AGR_Audience257-BIS_010'
+ 'AGR_Audience257-BIS_011']";[1.0, 0.156, 0.179]
+AGR_Audience257-BIS_010;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_004' 'KBR_ms.III.1635_007'
+ 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_007'
+ 'AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_009'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_012' 'AGR_Audience257-BIS_014'
+ 'AGR_Audience257-BIS_015' 'AGR_Audience257-BIS_016'
+ 'AGR_Audience257-BIS_018' 'AGR_Audience257-BIS_019'
+ 'AGR_Audience257-BIS_020' 'AGR_Audience257-BIS_021'
+ 'AGR_Audience257-BIS_028']";[0.213, 0.214, 0.186, 0.191, 0.19, 0.159, 0.153, 0.242, 0.156, 1.0, 0.151, 0.152, 0.174, 0.166, 0.195, 0.156, 0.167, 0.159, 0.157, 0.176]
+AGR_Audience257-BIS_011;"['KBR_ms.III.1635_004' 'KBR_ms.III.987_001' 'AGR_Audience257-BIS_001'
+ 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_009'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_012' 'AGR_Audience257-BIS_016'
+ 'AGR_Audience257-BIS_017' 'AGR_Audience257-BIS_018'
+ 'AGR_Audience257-BIS_019' 'AGR_Audience257-BIS_023'
+ 'AGR_Audience257-BIS_024' 'AGR_Audience257-BIS_027']";[0.182, 0.231, 0.212, 0.173, 0.178, 0.189, 0.179, 0.151, 1.0, 0.155, 0.177, 0.165, 0.219, 0.178, 0.172, 0.236, 0.168]
+AGR_Audience257-BIS_012;"['KBR_ms.III.1635_001' 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_012' 'AGR_Audience257-BIS_014'
+ 'AGR_Audience257-BIS_019' 'AGR_Audience257-BIS_021'
+ 'AGR_Audience257-BIS_027' 'AGR_Audience257-BIS_028']";[0.155, 0.207, 0.181, 0.22, 0.236, 0.152, 0.155, 1.0, 0.342, 0.217, 0.172, 0.251, 0.293]
+AGR_Audience257-BIS_014;"['AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_006'
+ 'AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_010'
+ 'AGR_Audience257-BIS_012' 'AGR_Audience257-BIS_014'
+ 'AGR_Audience257-BIS_019' 'AGR_Audience257-BIS_021'
+ 'AGR_Audience257-BIS_027' 'AGR_Audience257-BIS_028']";[0.195, 0.227, 0.215, 0.174, 0.342, 1.0, 0.328, 0.213, 0.221, 0.266]
+AGR_Audience257-BIS_015;['AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_015'];[0.166, 1.0]
+AGR_Audience257-BIS_016;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_004' 'KBR_ms.III.987_001'
+ 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_010'
+ 'AGR_Audience257-BIS_011' 'AGR_Audience257-BIS_016'
+ 'AGR_Audience257-BIS_018' 'AGR_Audience257-BIS_019'
+ 'AGR_Audience257-BIS_024' 'AGR_Audience257-BIS_025'
+ 'AGR_Audience257-BIS_028']";[0.182, 0.172, 0.186, 0.18, 0.235, 0.18, 0.195, 0.177, 1.0, 0.176, 0.158, 0.202, 0.598, 0.161]
+AGR_Audience257-BIS_017;"['KBR_ms.III.1635_006' 'KBR_ms.III.1635_007' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_011' 'AGR_Audience257-BIS_017']";[0.165, 0.155, 0.187, 0.165, 1.0]
+AGR_Audience257-BIS_018;"['KBR_ms.III.1635_001' 'KBR_ms.III.1635_007' 'KBR_ms.III.987_001'
+ 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_016' 'AGR_Audience257-BIS_018'
+ 'AGR_Audience257-BIS_020' 'AGR_Audience257-BIS_023'
+ 'AGR_Audience257-BIS_024']";[0.164, 0.155, 0.174, 0.175, 0.152, 0.156, 0.219, 0.176, 1.0, 0.168, 0.166, 0.204]
+AGR_Audience257-BIS_019;"['KBR_ms.III.1635_004' 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_006'
+ 'AGR_Audience257-BIS_007' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_012' 'AGR_Audience257-BIS_014'
+ 'AGR_Audience257-BIS_016' 'AGR_Audience257-BIS_019'
+ 'AGR_Audience257-BIS_020' 'AGR_Audience257-BIS_021'
+ 'AGR_Audience257-BIS_024' 'AGR_Audience257-BIS_027'
+ 'AGR_Audience257-BIS_028']";[0.182, 0.178, 0.203, 0.167, 0.306, 0.167, 0.178, 0.217, 0.328, 0.158, 1.0, 0.157, 0.292, 0.188, 0.242, 0.213]
+AGR_Audience257-BIS_020;"['AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_018'
+ 'AGR_Audience257-BIS_019' 'AGR_Audience257-BIS_020'
+ 'AGR_Audience257-BIS_023' 'AGR_Audience257-BIS_027']";[0.206, 0.21, 0.159, 0.168, 0.157, 1.0, 0.229, 0.162]
+AGR_Audience257-BIS_021;"['AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_012'
+ 'AGR_Audience257-BIS_014' 'AGR_Audience257-BIS_019'
+ 'AGR_Audience257-BIS_021' 'AGR_Audience257-BIS_027'
+ 'AGR_Audience257-BIS_028']";[0.157, 0.219, 0.157, 0.172, 0.213, 0.292, 1.0, 0.211, 0.246]
+AGR_Audience257-BIS_022;['AGR_Audience257-BIS_022'];[1.0]
+AGR_Audience257-BIS_023;"['AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_011'
+ 'AGR_Audience257-BIS_018' 'AGR_Audience257-BIS_020'
+ 'AGR_Audience257-BIS_023']";[0.249, 0.21, 0.17, 0.172, 0.166, 0.229, 1.0]
+AGR_Audience257-BIS_024;"['KBR_ms.III.987_001' 'AGR_Audience257-BIS_003' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_011' 'AGR_Audience257-BIS_016'
+ 'AGR_Audience257-BIS_018' 'AGR_Audience257-BIS_019'
+ 'AGR_Audience257-BIS_024' 'AGR_Audience257-BIS_028']";[0.168, 0.151, 0.198, 0.236, 0.202, 0.204, 0.188, 1.0, 0.181]
+AGR_Audience257-BIS_025;['AGR_Audience257-BIS_016' 'AGR_Audience257-BIS_025'];[0.598, 1.0]
+AGR_Audience257-BIS_026;['AGR_Audience257-BIS_008' 'AGR_Audience257-BIS_026'];[0.189, 1.0]
+AGR_Audience257-BIS_027;"['KBR_ms.III.1635_004' 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_011' 'AGR_Audience257-BIS_012'
+ 'AGR_Audience257-BIS_014' 'AGR_Audience257-BIS_019'
+ 'AGR_Audience257-BIS_020' 'AGR_Audience257-BIS_021'
+ 'AGR_Audience257-BIS_027' 'AGR_Audience257-BIS_028']";[0.207, 0.17, 0.191, 0.176, 0.18, 0.168, 0.251, 0.221, 0.242, 0.162, 0.211, 1.0, 0.295]
+AGR_Audience257-BIS_028;"['KBR_ms.III.1635_004' 'AGR_Audience257-BIS_002' 'AGR_Audience257-BIS_005'
+ 'AGR_Audience257-BIS_006' 'AGR_Audience257-BIS_008'
+ 'AGR_Audience257-BIS_010' 'AGR_Audience257-BIS_012'
+ 'AGR_Audience257-BIS_014' 'AGR_Audience257-BIS_016'
+ 'AGR_Audience257-BIS_019' 'AGR_Audience257-BIS_021'
+ 'AGR_Audience257-BIS_024' 'AGR_Audience257-BIS_027'
+ 'AGR_Audience257-BIS_028']";[0.177, 0.163, 0.195, 0.228, 0.203, 0.176, 0.293, 0.266, 0.161, 0.213, 0.246, 0.181, 0.295, 1.0]
+AGR_Audience1398-6_001;['AGR_Audience1398-6_001'];[1.0]

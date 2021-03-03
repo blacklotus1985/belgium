@@ -16,9 +16,7 @@ conf = configparser.ConfigParser()
 main_path = os.getcwd()
 path = os.path.dirname(os.getcwd())
 conf.read(os.path.dirname(os.getcwd())+'\configurations\configurations.ini')
-farnese = True
-if farnese:
-    filename = '\output\lettere_pulite_farnese.csv'
+filename = '/output/lettere_metadati.csv'
 df = pd.read_csv(os.path.dirname(os.getcwd())+filename,delimiter=';', names=['id_lettera','testo'] )
 old_df = df.copy()
 
@@ -127,10 +125,10 @@ def threshold_descriptions(df,matrix, conf, threshold=0.5,filename="default",sav
     threshhold_list=[]
     for i in range(len(matrix[0])):
         cosine_desc = matrix[i]
-        dict = {"id_lettera":df["id_lettera"][i],"similar_ID":df["id_lettera"][np.where(matrix[i]>threshold)[0]].values, "similarity_value":list(np.asarray(cosine_desc[np.where(cosine_desc>threshold)[0]]))}
+        dict = {"id_lettera":df["id_lettera"][i],"similar_ID":list(df["id_lettera"][np.where(matrix[i]>threshold)[0]].values), "similarity_value":list(np.asarray(cosine_desc[np.where(cosine_desc>threshold)[0]]))}
         threshhold_list.append(dict)
     df_threshold = pd.DataFrame.from_records(threshhold_list,coerce_float=True)
-
+    df_threshold = df_threshold.replace('\n', '')
     if save:
         wd = os.getcwd()
         os.chdir(wd)
@@ -176,6 +174,19 @@ swap_vocab = {v:k for k,v in dict_vocab.items()}
 
 # calculate cosine similarity for the embedded vectors of the job positions
 cosine_sim = np.round(cosine_similarity(tfidf_matrix, tfidf_matrix),3)
+gephi = True
+if gephi:
+    df_cos = pd.DataFrame(cosine_sim,columns=df.id_lettera,index=df.id_lettera)
+    cos_list =[]
+    for i in range(df_cos.shape[0]):
+        for j in range(df_cos.shape[1]-i):
+            dict = {"Source":df_cos.index[i],"Target":df_cos.index[j+i],"Type":"Undirected","Weight":df_cos.iloc[i,j+i]}
+            cos_list.append(dict)
+
+    save_mat = pd.DataFrame(cos_list)
+    save_mat = save_mat[save_mat.Weight<1]
+    save_mat.to_csv(os.path.dirname(os.getcwd())+conf.get("OUTPUT_FILES","folder")+"edge_real.csv",sep=";", index = False)
+    df.to_csv(os.path.dirname(os.getcwd())+conf.get("OUTPUT_FILES","folder")+"node_real.csv",sep=";", index = False)
 
 
 # find the most 5 representative words for each job position and save it into csv file
@@ -185,7 +196,7 @@ final_dict_list, data_frame_id_words = find_best_words(df=df,matrix=tfidf_matrix
 description_index_list = top_desciptions(cosine_sim)
 
 # loops all the description and gets indexes of all the descriptions that are within a threshold of similarity.
-threshhold_list,df_threshold = threshold_descriptions(df=df,matrix=cosine_sim,conf=conf,threshold=0.15,filename="threshold_text_farnese.csv")
+threshhold_list,df_threshold = threshold_descriptions(df=df,matrix=cosine_sim,conf=conf,threshold=0.15,filename="threshold_text_real.csv")
 
 # drop duplicates from column
 indices = pd.Series(df.index, index=df['testo']).drop_duplicates()
